@@ -11,7 +11,15 @@ Sprockets is a custom theme for [GRAV CMS](https://getgrav.org). This theme is b
 * [Slippry Image Carousel](http://slippry.com) support
 * Built-in support for on-page navigation
 * Multiple page template types
-* Fontawesome icon support
+* [Font Awesome 5](https://fontawesome.com) icon support
+* Social site configuration and linking
+  * Facebook
+  * Twitter
+  * LinkedIn
+  * Instagram
+  * Flickr
+  * Pinterest
+  * and more....
 
 ### Supported Page Templates
 
@@ -21,6 +29,7 @@ Sprockets is a custom theme for [GRAV CMS](https://getgrav.org). This theme is b
 * Item view       `item.md`
 * About view      `about.md`
 * Staff Bio view  `bio.md`
+* Contact view    `contact.md`
 * Error view      `error.md`
 * Widgets
   * Slippry Carousel (setup in page.md front matter)
@@ -32,6 +41,29 @@ To install the theme into an existing GRAV site, copy the contents of the `user 
 
 **Note**   
 This repo is setup so that you can simply set the repo as a ready to run [GRAV](http://getgrav.org) site to make it easy to get it up and running locally. Refer to GRAVs documentation for more information on GRAV and GRAV Development.
+
+### Configuration
+
+All of the site settings are configured in the sprockets.yaml file.
+
+* name (site or business name)
+* business
+  * name (added here so it could be different from site name)
+  * address 1
+  * address 2 (optional)
+  * address 3 (optional)
+  * city
+  * state
+  * postal code
+  * phone
+  * fax (optional)
+  * email
+  * directions (optional)
+* social
+  * site (used to display Font Awesome icon)
+  * username (your username)
+  * text (title text for link)
+  * link (link to the social site - probably won't need to change this)
 
 ### Page Structure
 
@@ -52,10 +84,15 @@ The inventory page has a built in category menu based on the child pages of the 
     * menu-image.jpg
     * inventory.md
 
+### About Page
+
+### Contact Page
+
+The contact page has a custom address block that automatically populates the business address information based on the settings configured in the `sprockets.yaml` file. The page can be configured to be 1 or 2 columns, and the business address block can be configured to be on the right or the left if `two_column` is set to true, and setting `address:` to left or right. The page content will then appear on the aopposite side as the address or below the address if `two_column` is set to false. This page also utilizes the contact form plugin.
 
 ### Thanks
 
-Thank you to for using this theme. I put a lot of time and work into and I hop you like it. If you have any issues or would to request features, feeel free to create a new [issue](https://github.com/retsoced/camera-shop-theme/issues) here in this repo.
+Thank you to for using this theme. I put a lot of time and work into and I hop you like it. If you have any issues or would to request features, feeel free to create a new [issue](https://github.com/retsoced/sprockets/issues) here in this repo.
 
 ### License
 The files contained in this project are released under the MIT License. You can find a copy of this license in LICENSE.md file.

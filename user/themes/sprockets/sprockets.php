@@ -3,7 +3,7 @@ namespace Grav\Theme;
 
 use Grav\Common\Theme;
 
-class CameraShop extends Theme
+class Sprockets extends Theme
 {
 
 }

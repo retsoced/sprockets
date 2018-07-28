@@ -44,7 +44,7 @@
           <div class="row">
             <div class="col-4 logo">
               <h3 class="site-name">
-                <img src="/user/themes/camera-shop/assets/images/logo.jpg" width="75" alt="logo">
+                <img src="{{ theme_url }}/assets/images/logo.jpg" width="75" alt="logo">
                 <a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a>
               </h3>
             </div>
@@ -68,25 +68,7 @@
       {% endblock %}
 
       {% block footer %}
-        <footer class="site-footer">
-          <section class="row flexy">
-            <header></header>
-            <div class="column col-6">
-              <p class="copyright"><i class="fa fa-copyright"></i>{{ config.site.copyright }}</p>
-            </div>
-            <div class="column col-6">
-              <menu class="socialize row small">
-
-            	  {% for site in config.site.social %}
-    							<a href="{{ site.url }}" title="{{ site.text }}" role="menuitem">
-    								<i class="fab fa-{{ site.site }}"></i>
-    							</a>
-                {% endfor %}
-
-  						</menu>
-            </div>
-          </section>
-        </footer>
+        {% include 'partials/footer.html.twig' %}
       {% endblock %}
     </section>
   </body>

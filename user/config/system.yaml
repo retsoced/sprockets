@@ -4,7 +4,7 @@ home:
   alias: '/home'
 
 pages:
-  theme: camera-shop
+  theme: sprockets
   markdown:
     extra: false
   process:

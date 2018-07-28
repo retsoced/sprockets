@@ -1,0 +1,81 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+  <header class="location-map">
+    <h1 class="row page-title">{{ page.title}}</h1>
+  </header>
+  <article>
+    <div class="row">
+    {% if page.header.two_column %}
+      {% if page.header.address == 'right' %}
+        <section class="col-6">
+        {{ page.content }}
+        </section>
+        <section class="col-6 location">
+          <ul class="address-block">
+            <li class="name">{{ theme_config.business.name }}</li>
+            <li>{{ theme_config.business.address_1 }}</li>
+            {% if theme_config.business.address_2 %}<li>{{ theme_config.business.address_2 }}</li>{% endif %}
+            {% if theme_config.business.address_3 %}<li>{{ theme_config.business.address_3 }}</li>{% endif %}
+            <li>{{ theme_config.business.city }} {{ theme_config.business.state_long }}, {{ theme_config.business.postal_code }}</li>
+            <li><i class="fas fa-phone-square"></i>{{ theme_config.business.phone }}</li>
+            {% if theme_config.business.fax %}<li><i class="fas fa-fax"></i>{{ theme_config.business.fax }}</li>{% endif %}
+            <li><i class="fas fa-envelope"></i>{{ theme_config.business.email }}</li>
+            {% if theme_config.business.directions %}<li><i class="fas fa-map-marked-alt"></i><a href="{{ theme_config.business.directions}}">get directions</a></li>{% endif %}
+          </ul>
+        </section>
+      {% else %}
+        <section class="col-6 location">
+          <ul>
+            <li class="name">{{ theme_config.business.name }}</li>
+            <li>{{ theme_config.business.address_1 }}</li>
+            {% if theme_config.business.address_2 %}<li>{{ theme_config.business.address_2 }}</li>{% endif %}
+            {% if theme_config.business.address_3 %}<li>{{ theme_config.business.address_3 }}</li>{% endif %}
+            <li>{{ theme_config.business.city }} {{ theme_config.business.state_long }}, {{ theme_config.business.postal_code }}</li>
+            <li><i class="fas fa-phone-square"></i>{{ theme_config.business.phone }}</li>
+            {% if theme_config.business.fax %}<li><i class="fas fa-fax"></i>{{ theme_config.business.fax }}</li>{% endif %}
+            <li><i class="fas fa-envelope"></i>{{ theme_config.business.email }}</li>
+            {% if theme_config.business.directions %}<li><i class="fas fa-map-marked-alt"></i><a href="{{ theme_config.business.directions}}">get directions</a></li>{% endif %}
+          </ul>
+        </section>
+        <section class="col-6">
+        {{ page.content }}
+        </section>
+      {% endif %}
+    {% else %}
+      <div class="row">
+        <section class="col-12 location">
+          <div class="row address-block">
+            <section class="col-6">
+              <ul>
+                <li class="name">{{ theme_config.business.name }}</li>
+                <li>{{ theme_config.business.address_1 }}, {% if theme_config.business.address_2 %}{{ theme_config.business.address_2 }}</li>{% endif %}
+                {% if theme_config.business.address_3 %}<li>{{ theme_config.business.address_3 }}</li>{% endif %}
+                <li>{{ theme_config.business.city }} {{ theme_config.business.state_long }}, {{ theme_config.business.postal_code }}</li>
+              </ul>
+              </section>
+              <section class="col-6">
+                <ul>
+                  <li><i class="fas fa-phone-square"></i>{{ theme_config.business.phone }}</li>
+                  {% if theme_config.business.fax %}<li><i class="fas fa-fax"></i>{{ theme_config.business.fax }}</li>{% endif %}
+                  <li><i class="fas fa-envelope"></i>{{ theme_config.business.email }}</li>
+                  {% if theme_config.business.directions %}<li><i class="fas fa-map-marked-alt"></i><a href="{{ theme_config.business.directions}}">get directions</a></li>{% endif %}
+                </ul>
+              </section>
+          </div>
+        </section>
+      </div>
+      <div class="row">
+        <section class="col-12">
+        {{ page.content }}
+        </section>
+      </div>
+    {% endif %}
+    </div>
+    <div class="row">
+      <section class="col-12">
+        {% include 'partials/recaptchaform.html.twig' with {'page': page, 'recaptchacontact': recaptchacontact} %}
+      </section>
+    </div>
+  </article>
+{% endblock %}

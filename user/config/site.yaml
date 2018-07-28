@@ -1,44 +1,6 @@
-title: Camera Shop
-name: Sprocket Holes NW
-copyright: 2018 Camera Shop
-business:
-  name: Sprocket Holes NW
-  address_1: 43555 NE Torrent Blvd
-  address_2: Suite 500
-  city: Portland
-  state_long: Oregon
-  state_abbr: OR
-  postal_code: 97224
-  phone: (503) 555-9988
-  fax: (971) 555-6677
-  email: contact@storedomain.com
+title: Sprocket Holes NW
 author:
   name: Darryll DeCoster
   email: 'darryll@decoster.design'
 metadata:
   description: 'Ye olde Camera Shoppe'
-social:
-  - site: github
-    username: http://www.github.com/username
-    text: Code with me on Github
-  - site: twitter
-    username: http://www.twitter.com/username
-    text: Follow me on Twitter
-  - site: linkedin
-    username: http://www.linkedin.com/in/username
-    text: Connect with me on LinkedIn
-  - site: instagram
-    username: http://www.instagram.com/username
-    text: Follow me on Instagram
-  - site: flickr
-    username: http://www.flickr.com/photos/username
-    text: Follow me on Flickr
-  - site: behance
-    username: https://www.behance.net/username
-    text: Follow me on Behance
-  - site: pinterest
-    username: http://www.pinterest.com/username
-    text: Follow me on Pinterest
-  - site: google-plus
-    username: http://www.pinterest.com/username
-    text: Find me on Google +

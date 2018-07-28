@@ -8,26 +8,26 @@ og:
 showcase:
   display: false
   parallax: true
-  image: '/user/pages/01.home/showcase.jpeg'
+  image: 'showcase.jpeg'
   class: 'homepage-hero'
   height: 'height: 360px;'
 carousel: true
 slider:
   - image:
     anchor: '#slide1'
-    url: '/user/pages/01.home/store-front.jpg'
+    name: 'store-front.jpg'
     caption: 'caption with a <a href=''#''>link!</a>'
   - image:
     anchor: '#slide2'
-    url: '/user/pages/01.home/image-2.jpg'
+    name: 'image-2.jpg'
     caption: 'caption text'
   - image:
     anchor: '#slide3'
-    url: '/user/pages/01.home/image-3.jpg'
+    name: 'image-3.jpg'
     caption: 'caption text'
   - image:
     anchor: '#slide4'
-    url: '/user/pages/01.home/image-4.jpg'
+    name: 'image-4.jpg'
     caption: 'caption 4 text'
 ---
 

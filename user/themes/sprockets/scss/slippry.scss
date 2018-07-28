@@ -18,8 +18,8 @@ $controls_size: 2.8em !default;    // size of the next/ prev buttons
 $pager_size: 1.2em !default;       // size of the pager bubbles
 $trans_ease: ease !default;        // easing for the transitions
 $mobile_break: 600px !default;     // breakpoint to use some special mobile styling
-$spinner_url: '/user/themes/camera-shop/assets/images/sy-loader.gif' !default;
-$arrows_url: '/user/themes/camera-shop/assets/images/arrows.svg' !default;
+$spinner_url: '/user/themes/sprockets/assets/images/sy-loader.gif' !default;
+$arrows_url: '/user/themes/sprockets/assets/images/arrows.svg' !default;
 
 @mixin animation ($animation) {
   animation-name: $animation;

@@ -1,0 +1,55 @@
+enabled: true
+dropdown:
+  enabled: true
+name: Sprocket Holes NW
+copyright: 2018 Camera Shop
+business:
+  name: Sprocket Holes NW
+  address_1: 43555 NE Torrent Blvd
+  address_2: Suite 500
+  address_3:
+  city: Portland
+  state_long: Oregon
+  state_abbr: OR
+  postal_code: 97224
+  phone: (503) 555-9988
+  fax: (971) 555-6677
+  email: contact@storedomain.com
+  directions: 'http://www.google.com/maps'
+social:
+  - site: 'facebook'
+    username: 'username'
+    text: 'Follow me on Facebook'
+    link: 'https://www.facebook.com/'
+  - site: 'twitter'
+    username: 'username'
+    text: 'Follow me on Twitter'
+    link: 'https://www.twitter.com/'
+  - site: 'linkedin'
+    username: 'username'
+    text: 'Connect with me on LinkedIn'
+    link: 'https://www.linkedin.com/in/'
+  - site: 'instagram'
+    username: 'username'
+    text: 'Follow me on Instagram'
+    link: 'https://www.instagram.com/'
+  - site: 'flickr'
+    username: 'username'
+    text: 'Follow me on Flickr'
+    link: 'https://www.flickr.com/photos/'
+  - site: 'behance'
+    username: 'username'
+    text: 'Follow me on Behance'
+    link: 'https://www.behance.net/'
+  - site: 'pinterest'
+    username: 'username'
+    text: 'Follow me on Pinterest'
+    link: 'https://www.pinterest.com/'
+  - site: 'google-plus'
+    username: 'username'
+    text: 'Find me on Google +'
+    link: 'https://plus.google.com/u/0/+'
+  - site: 'github'
+    username: 'username'
+    text: 'Code with me on Github'
+    link: 'https://www.github.com/'

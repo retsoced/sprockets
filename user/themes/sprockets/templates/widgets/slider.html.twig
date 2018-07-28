@@ -2,7 +2,7 @@
   {% for image in page.header.slider %}
     <li>
       <a href="{{ image.anchor }}">
-        <img src="{{ image.url }}" alt="{{ image.caption }}">
+        <img src="{{ page.url }}{{ image.name }}" alt="{{ image.caption }}">
       </a>
     </li>
   {% endfor %}
