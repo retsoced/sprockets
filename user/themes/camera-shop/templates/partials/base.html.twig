@@ -1,0 +1,93 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+<!DOCTYPE html>
+<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+  <head>
+    {% block head %}
+      <meta charset="utf-8" />
+      <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+
+      {% include 'partials/metadata.html.twig' %}
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="icon" type="image/png" href="{{ url('theme://images/favicon.png') }}" />
+      <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+      <meta name="MobileOptimized" content="width" />
+      <meta name="HandheldFriendly" content="true" />
+
+      <!-- OG: -->
+      {% include 'partials/opengraph.html.twig' %}
+
+      {% block stylesheets %}
+        {% do assets.addCss('theme://assets/css/template.min.css', 101) %}
+        {% do assets.addCss('theme://assets/css/fontawesome-all.min.css', 100) %}
+        {% do assets.addCss('theme://assets/css/custom.min.css') %}
+      {% endblock %}
+
+      {{ assets.css() }}
+
+      {% block javascripts %}
+        {% do assets.addJs('jquery', 101) %}
+        {% do assets.addJs('theme://assets/js/modernizr.custom.71422.js', 100) %}
+        {% do assets.addJs('theme://assets/js/slippry.js') %}
+        {% do assets.addJs('theme://assets/js/parallax.min.js') %}
+        {% do assets.addJs('theme://assets/js/app-min.js') %}
+      {% endblock %}
+      {{ assets.js() }}
+
+    {% endblock head %}
+  </head>
+  <body id="top" class="{{ page.header.body_classes }}">
+    <section class="wrapper">
+      {% block header %}
+        <header class="site-header">
+          <div class="row">
+            <div class="col-4 logo">
+              <h3 class="site-name">
+                <img src="/user/themes/camera-shop/assets/images/logo.jpg" width="75" alt="logo">
+                <a href="{{ base_url == '' ? '/' : base_url }}">{{ config.site.title }}</a>
+              </h3>
+            </div>
+            <div class="col-8">
+              <nav class="main-nav">
+                {% block header_extra %}{% endblock %}
+
+                {% block header_navigation %}
+                  {% include 'partials/navigation.html.twig' %}
+                {% endblock %}
+              </nav>
+            </div>
+          </div>
+        </header>
+      {% endblock %}
+
+      {% block body %}
+        <section id="body" class="{{ class }}">
+          {% block content %}{% endblock %}
+        </section>
+      {% endblock %}
+
+      {% block footer %}
+        <footer class="site-footer">
+          <section class="row flexy">
+            <header></header>
+            <div class="column col-6">
+              <p class="copyright"><i class="fa fa-copyright"></i>{{ config.site.copyright }}</p>
+            </div>
+            <div class="column col-6">
+              <menu class="socialize row small">
+
+            	  {% for site in config.site.social %}
+    							<a href="{{ site.url }}" title="{{ site.text }}" role="menuitem">
+    								<i class="fab fa-{{ site.site }}"></i>
+    							</a>
+                {% endfor %}
+
+  						</menu>
+            </div>
+          </section>
+        </footer>
+      {% endblock %}
+    </section>
+  </body>
+</html>

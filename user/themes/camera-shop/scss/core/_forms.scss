@@ -1,0 +1,142 @@
+fieldset {
+	border: 1px solid $core-border-color;
+}
+
+textarea, input, select[multiple=multiple] {
+	background-color: white;
+	border: 1px solid $core-border-color;
+
+	&:hover {
+		border-color: $core-border-color-hover;
+	}
+
+	&:focus {
+		border-color: $core-border-color-focus;
+	}
+}
+
+label {
+	font-weight: bold;
+}
+
+// Forms
+.form-field {
+	.required {
+		color: #F3443F;
+		vertical-align: top;
+		height: 1.5rem;
+		display: inline-block;
+	}
+}
+
+form {
+	.buttons {
+		text-align: center;
+	}
+	input {
+		font-weight: 400;
+	}
+}
+
+// ------------------------------
+// CONTACT FORM STYLES
+
+.recaptcha-form {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  background: #f7f7f7;
+  border-radius: 6px;
+
+  .antispam-div {
+    display: none;
+  }
+
+  label {
+    display: none;
+  }
+
+  fieldset {
+    @include clean-block;
+    border: none;
+  }
+
+  h3 {
+    @include clean-block;
+  }
+
+  .form-group {
+    margin: 10px 0;
+  }
+
+  input, textarea {
+    display: block;
+    margin: 6px 0;
+    padding: 3px 10px;
+    width: 80%;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    font-family: $font-stack-sans;
+    border: 1px solid lighten($primary-color, 20%);
+    &::focus {
+      border: 2px solid $primary-color;
+    }
+  }
+
+  button[type="submit"] {
+    display: block;
+    margin: 0;
+    padding: 8px 30px;
+    background: #558042;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 6px;
+    @include transition( all .1s ease-out );
+
+    &:hover {
+      background:lighten(#558042,10%);
+      color: #222;
+      @include transition( all .1s ease-out );
+    }
+  }
+}
+
+.recaptcha-form-container {
+  .alert {
+    border: 1px solid #ccc;
+    background-color: #fafafa;
+    padding: 10px;
+
+    p:first-of-type:first-letter {
+      color: inherit !important;
+      float: none !important;
+      font-family: inherit !important;
+      font-size: inherit !important;
+      line-height: inherit !important;
+      padding: 0 !important;
+    }
+  }
+  
+  .alert.success {
+    border-color: #558042;
+    background-color: #F4FBF1;
+  }
+  
+  .alert.error, .alert.fail {
+    border-color: #B67272;
+    background-color: #FBF1F1;
+  }
+  
+  .alert p {
+    margin: 0;
+  }
+}
+
+@media (min-width: 860px) {
+  .recaptcha-contact {
+      width: 50%;
+  }
+}
+

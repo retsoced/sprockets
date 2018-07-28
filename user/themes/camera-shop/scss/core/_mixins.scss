@@ -1,0 +1,171 @@
+// Colors
+// ---------------------- \\
+@mixin grayscaleBG( $percent ) {
+  // @include grayscaleBG( 100% );
+  @if $percent != '' {
+    background-color: mix( rgb(0,0,0), rgb(255,255,255), $percent );
+  }
+}
+
+@mixin warmGray( $percent ) {
+  // @include warmGray( 100% );
+  @if $percent != '' {
+    background-color: mix( rgb(12,11,10), rgb(248,242,233), $percent );
+  }
+}
+
+@mixin coolGray( $percent ) {
+  // @include coolGray( 100% );
+  @if $percent != '' {
+    background-color: mix( rgb(10,11,12), rgb(229,244,250), $percent );
+  }
+}
+
+// Global
+// ---------------------- \\
+@mixin clearfix {
+  &:after { content: ""; display: table; clear: both; }
+}
+
+@mixin crop-border( $radius: $std-radius, $color: $border-color, $line: 1px ){
+  border-radius: $radius;
+  border: $line solid $color;
+  overflow: hidden;
+}
+
+@mixin placeholder-text {
+  ::-webkit-input-placeholder { @content }
+  :-moz-placeholder { @content }
+  ::-moz-placeholder { @content }
+  :-ms-input-placeholder { @content }
+}
+
+@mixin simple-linear-gradient($top: $default-gradient-top-color, $bottom: $default-gradient-bottom-color) {
+  background-color: mix($top, $bottom);
+  background-image: linear-gradient(to bottom, $top, $bottom);
+}
+
+@mixin vertical-gradient($top: $default-gradient-top-color, $middle: $default-gradient-bottom-color, $bottom: $default-gradient-bottom-color) {
+  background-image: linear-gradient(to bottom, $top 0, $middle 15%, $bottom 60%);
+}
+
+@mixin simple-horizontal-gradient($fromColor: $default-gradient-top-color, $toColor: $default-gradient-bottom-color) {
+  background: $fromColor;
+  background: linear-gradient(to right, $fromColor 0%, $toColor 40%);
+}
+
+// pattern to hide overflow text and display with an ellipsis
+// element also needs to have its display property set to block or inline-block
+
+@mixin truncate-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-right: 1em;
+}
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+     -moz-font-smoothing: antialiased;
+       -o-font-smoothing: antialiased;
+}
+
+// Standard error styling for body copy
+
+@mixin error-body-text {
+  color: $text-body-color-error;
+}
+
+@mixin break-word {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+@mixin rotate($degrees) {
+	-webkit-transform: rotate($degrees);
+	-moz-transform: rotate($degrees);
+	-ms-transform: rotate($degrees);
+	-o-transform: rotate($degrees);
+}
+
+@mixin font-smoothing($value: on) {
+  @if $value == on {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin flexy ( $display:flex, $direction: row, $wrap: wrap, $justify: space-between ) {
+	position: relative;
+	display: $display;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: $justify;
+}
+
+@mixin clean-block {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin border-radius( $curve ){
+	border-radius: $curve;
+  -moz-border-radius: $curve;
+  -o-border-radius: $curve;
+  -webkit-border-radius: $curve;
+}
+
+@mixin border-radius-left ( $radius ) {
+	-webkit-border-top-left-radius: $radius;
+  -webkit-border-bottom-left-radius: $radius;
+  -moz-border-radius-topleft: $radius;
+  -moz-border-radius-bottomleft: $radius;
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin scale( $percentage:1.5 ) {
+  -moz-transform: scale($percentage);
+  -webkit-transform: scale($percentage);
+  transform: scale($percentage);
+}
+
+// ---------------------------
+// just for the flex of it
+@mixin flexy-bits($display:flex, $flow:row, $justify:space-around){
+  display: $display;
+  flex-flow: $flow;
+  justify-content: $justify;
+}
+
+// ------------
+// Breakpoints
+// usage: @include for-desktop-up { [insert styles here] }
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}

@@ -1,0 +1,35 @@
+$font-path: '/assets/fonts/';
+$font-stack-serif: 'Roboto Slab', 'Times New Roman', serif;
+$font-stack-sans: 'Open Sans', Helvetica, Arial, sans-serif;
+$font-family-mono: 'Roboto Mono', 'Courier New', monospace;
+$core-font-size: 1.2em;
+
+// ---- COLORS
+$primary-color-dark:      #0b3c5d;
+$primary-color:           #328cc1;
+$site-black:              #1d2731;
+$primary-color-text:      $site-black;
+$secondary-accent:        #984b43;
+$accent-color:            #eac67a;
+$core-text-color:         #222222;
+$secondary-text-color:    #757575;
+$divider-color:           #BDBDBD;
+$light-grey:              #e5e5e5;
+
+$core-border-color:       #BDBDBD;
+$core-border-color-hover: #BDBDBD;
+$core-border-color-focus: #BDBDBD;
+
+// fonts
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 700;
+$line-height: 1.5;
+
+$site-max-width: 1000px;
+$header-height: 4.5em;
+
+// Global Paddings
+$padding-horiz: 7rem;
+$padding-vert: 3rem;

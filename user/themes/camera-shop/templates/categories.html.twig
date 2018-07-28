@@ -1,0 +1,25 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+	<header class="row">
+		<h1 class="page-title">{{ page.title}}</h1>
+	</header>
+  <article class="row">
+		{{ page.content }}
+	</article>
+
+  <section class="row inventory main">
+
+    {% for p in page.collection %}
+      <div class="category">
+        <a href="{{ p.link }}" title="{{ p.title }}" target="_self">
+          <img src="{{ p.link }}/menu-image.jpg" alt="{{ p.title }} background image" width="100%">
+          <section class="info">
+            <h3 class="title">{{ p.menu }}</h3>
+          </section>
+        </a>
+      </div>
+    {% endfor %}
+
+  </section>
+{% endblock %}

@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700|Roboto+Mono|Roboto+Slab:700');
+
+// Titles, Text and fonts
+// ---------------------- \\
+
+html {font-size: 0.875em;}
+
+body {
+  background-color: white;
+  font-family: $font-stack-sans;
+  font-weight: 400;
+  line-height: 1.45;
+  color: $primary-color-text;
+}
+
+p {margin-bottom: 1.3em;font-size: 1.2em;}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  font-family: $font-stack-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.157em;
+}
+
+h2 {font-size: 2.369em; color: $primary-color;}
+
+h3 {font-size: 1.777em;}
+
+h4 {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+strong, b {}
+em, i {}
+
+.font-light {
+  font-weight: $font-weight-light;
+}
+
+.font-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-heavy {
+  font-weight: $font-weight-heavy;
+}

@@ -1,0 +1,8 @@
+{% block opengraph %}
+    <meta property="og:site_name" content="{{ site.name }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{ page.header.title }}" />
+    <meta property="og:image" content="{{ page.header.og.image }}" />
+    <meta property="og:description" content="{{ page.header.og.description }}" />
+    <meta property="og:url" content="{{ page.url(true, true) }}">
+{% endblock %}

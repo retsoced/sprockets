@@ -1,0 +1,11 @@
+email: deltaecho3@gmail.com
+fullname: 5up3r.Sh0p.4dm1n!
+title: 'Shop Owner'
+state: enabled
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$Js7Q4tnoohGLk6ET99Yc7.HyJpZ3V8gXWFoodbucjg2PkZxh88psG

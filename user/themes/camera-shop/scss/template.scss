@@ -1,0 +1,28 @@
+// REQUIRED DEPENDENCIES - DO NOT CHANGE
+
+// Load config
+@import "config";
+
+// Load Mixins
+@import "core/mixins";
+
+// Load core styles
+@import "core/base";
+@import "core/grid";
+
+// TEMPLATE COMPONENTS
+
+// Extensions
+@import "core/typography";
+
+// Header
+@import "core/layout";
+
+// Forms
+@import "core/forms";
+
+//slick carousel 
+@import "slippry";
+
+// Custom
+@import "custom";

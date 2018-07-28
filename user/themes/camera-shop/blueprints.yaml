@@ -1,0 +1,27 @@
+name: Camera Shop
+version: 1.0.1
+description: "Camera Shop theme"
+icon: empire
+author:
+  name: Darryll DeCoster
+  email: darryll@decoster.design
+  url: http://decoster.design
+homepage: https://github.com/retsoced/grav-boilerplate
+demo: http://retsoced.github.io/grav-boilerplate/demo
+keywords: boilerplate, theme, core, modern, fast, responsive, html5, css3
+bugs: https://github.com/retsoced/grav-boilerplate/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in navbar
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool

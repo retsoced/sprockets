@@ -1,0 +1,183 @@
+// utility
+
+.left {
+  text-align: left;
+  float: left;
+}
+
+.right {
+  text-align: right;
+  float: right;
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.hidden-sm {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+
+.wrapper {
+
+}
+
+.row {
+  display: block;
+  position: relative;
+  margin: 20px auto;
+  width: 100%;
+  max-width: $site-max-width;
+}
+
+.modular {
+  .row {
+
+  }
+}
+
+.default-animation {
+	@include transition(all 0.5s ease);
+}
+
+.padding-horiz {
+	padding-left: $padding-horiz;
+	padding-right: $padding-horiz;
+	@include for-big-desktop-up {
+		padding-left: $padding-horiz - 3rem;
+		padding-right: $padding-horiz - 3rem;
+	}
+
+	@include for-phone-only {
+		padding-left: $padding-horiz - 6rem;
+		padding-right: $padding-horiz - 6rem;
+	}
+}
+
+.padding-vert {
+	padding-top: $padding-vert;
+	padding-bottom: $padding-vert;
+}
+
+// ------------------------
+.main-nav {
+  height: 50px;
+
+  a {
+    text-decoration: none;
+  }
+  
+  nav {
+    font-family: monospace;
+  }
+
+  ul {
+    display: block;
+    position: relative;
+    float: right;
+    list-style: none;
+    margin: 8px 0 0 0;
+    padding: 3px 0 0 0;
+    
+    li {
+      color: #fff;
+      display: block;
+      float: left;
+      position: relative;
+      text-decoration: none;
+      transition-duration: 0.5s;
+  
+      a {
+        padding: 6px 30px;
+        border-radius: 6px;
+        color: #fff;
+        font-family: $font-stack-serif;
+        font-weight: 700;
+        font-size: 1.4em;
+        letter-spacing: 1px;
+        text-decoration: none;
+      }
+  
+      &:hover,
+      &:focus-within {
+        a {
+          background: rgba(50,50,50,.2);
+          border-radius: 6px;
+          color: $accent-color;
+          outline: none;
+        }
+        cursor: pointer;
+      }
+
+      &.current-menu-item {
+        a {
+          background: rgba(50,50,50,.2);
+          color: $accent-color;
+        }
+      }
+  
+      ul {    
+        position: absolute;
+        display: none;
+        left: 0;
+        top: 35px;
+        margin: 0;
+        padding: 10px;
+        min-width: 8rem;
+        background: rgba(50,50,50,.8);
+        border-radius: 6px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.5s ease;
+
+        li {
+          clear: both;
+          width: 100%;
+          padding: 4px 0;
+
+          a {
+            padding: 0 20px;
+            color: #fff !important;
+            cursor: pointer;
+            background: none;
+
+            &:hover {
+              color: $accent-color !important;
+            }
+          }
+        }
+      }
+    }
+    
+    li:hover > ul,
+    li:focus-within > ul,
+    li ul:hover,
+    li ul:focus {
+      visibility: visible;
+      opacity: 1;
+      display: block;
+      transition: all 0.5s ease;
+
+      a {
+        background: none;
+      }
+    }
+  }
+}
