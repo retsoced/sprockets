@@ -87,7 +87,7 @@ The inventory page has a built in category menu based on the child pages of the 
 ### About Page
 
 ### Contact Page
-
+![contact page layouts](contact-page-layouts.jpg)
 The contact page has a custom address block that automatically populates the business address information based on the settings configured in the `sprockets.yaml` file. The page can be configured to be 1 or 2 columns, and the business address block can be configured to be on the right or the left if `two_column` is set to true, and setting `address:` to left or right. The page content will then appear on the aopposite side as the address or below the address if `two_column` is set to false. This page also utilizes the contact form plugin.
 
 ### Thanks
