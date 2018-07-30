@@ -1,9 +1,8 @@
 ---
-title: 'On our shelves'
+title: 'New Gear'
 taxonomy:
     category:
         - inventory
-menu: Inventory
 og:
     image: facebook-image.jpg
     description: 'page description text'

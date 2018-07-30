@@ -1,13 +1,18 @@
 ---
 title: How to find us
 menu: Contact
+in_menu: true
+hide_submenu: true
+
 og:
-    site-name: 'Grav Boilerplate'
-    description: 'Lorem ipsum dolar set amet'
-    image: /assets/images/facebook-image.jpg
+  description: 'Lorem ipsum dolar set amet'
+  image: facebook-image.jpg
+
 body_classes: contact
 two_column: true
 address: 'right'
+hero_image: 'map.jpg'
+
 recaptchacontact:
   inject_template: false
   form_legend: "Contact Us"

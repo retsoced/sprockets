@@ -1,6 +1,8 @@
 enabled: true
 dropdown:
   enabled: true
+dropcaps:
+  enabled: true
 name: Sprocket Holes NW
 copyright: 2018 Camera Shop
 business:

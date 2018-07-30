@@ -31,6 +31,7 @@
         {% do assets.addJs('theme://assets/js/modernizr.custom.71422.js', 100) %}
         {% do assets.addJs('theme://assets/js/slippry.js') %}
         {% do assets.addJs('theme://assets/js/parallax.min.js') %}
+        {% do assets.addJs('theme://assets/js/instafeed.js') %}
         {% do assets.addJs('theme://assets/js/app-min.js') %}
       {% endblock %}
       {{ assets.js() }}
@@ -62,7 +63,11 @@
       {% endblock %}
 
       {% block body %}
-        <section id="body" class="{{ class }}">
+        {% if theme_config.dropcaps.enabled %}
+          <section id="body" class="{{ class }} drop-caps">
+        {% else %}
+          <section id="body" class="{{ class }}">
+        {% endif %}
           {% block content %}{% endblock %}
         </section>
       {% endblock %}

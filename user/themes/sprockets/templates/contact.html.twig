@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-  <header class="location-map">
+  <header class="location-map" style="background-image:url('{{ page.url }}/{{ page.header.hero_image }}');">
     <h1 class="row page-title">{{ page.title}}</h1>
   </header>
   <article>

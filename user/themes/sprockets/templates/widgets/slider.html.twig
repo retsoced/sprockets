@@ -1,6 +1,7 @@
 <ul id="hero-slider">
   {% for image in page.header.slider %}
     <li>
+      {% if image.title %}<h1 class="slide-title {{ image.title_color }}">{{ image.title }}</h1>{% endif %}
       <a href="{{ image.anchor }}">
         <img src="{{ page.url }}{{ image.name }}" alt="{{ image.caption }}">
       </a>

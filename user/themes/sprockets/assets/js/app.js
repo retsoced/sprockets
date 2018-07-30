@@ -32,11 +32,23 @@ jQuery(document).ready(function($){
 $(function(){
   if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {
     $('#ios-notice').removeClass('hidden');
-    $('.parallax-container').height( $(window).height() * 0.5 | 0 );
+    $('.parallax-container').height( 350 );
   } else {
     $(window).resize(function(){
-      var parallaxHeight = Math.max($(window).height() * 0.7, 200) | 0;
+      var parallaxHeight = 350;
       $('.parallax-container').height(parallaxHeight);
     }).trigger('resize');
+    //getFeed('username','yourkeygoeshere');
   }
 });
+
+function getFeed(userVal, accountKey){
+  var feed = new Instafeed({
+    get: 'user',
+    userId: userVal,
+    clientId: accountKey,
+    sortBy: 'most-recent'
+  });
+
+  feed.run();
+}

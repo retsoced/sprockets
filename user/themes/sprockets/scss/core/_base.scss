@@ -97,10 +97,10 @@ body {
     padding: 3px 0 0 0;
     
     li {
+      position: relative;
       color: #fff;
       display: block;
       float: left;
-      position: relative;
       text-decoration: none;
       transition-duration: 0.5s;
   
@@ -114,7 +114,13 @@ body {
         letter-spacing: 1px;
         text-decoration: none;
       }
-  
+      
+      .fa-angle-down {
+        position: absolute;
+        top: 6px;
+        right: 12px;
+      }
+
       &:hover,
       &:focus-within {
         a {
@@ -133,14 +139,14 @@ body {
         }
       }
   
-      ul {    
+      .sub-menu {    
         position: absolute;
         display: none;
         left: 0;
-        top: 35px;
+        top: 32px;
         margin: 0;
         padding: 10px;
-        min-width: 8rem;
+        min-width: 12rem;
         background: rgba(50,50,50,.8);
         border-radius: 6px;
         opacity: 0;
@@ -162,6 +168,14 @@ body {
               color: $accent-color !important;
             }
           }
+
+          .fa-angle-down {
+            display: none !important;
+          }
+
+          .sub-menu {
+            display: none !important;
+          }
         }
       }
     }
@@ -179,5 +193,17 @@ body {
         background: none;
       }
     }
+  }
+}
+
+// ------------------------
+// NAVIGATION LINKS
+.back-link {
+  position: relative;
+  font-size: 1.4em;
+  font-weight: 700;
+
+  .fas {
+    margin: 0 5px 0 0;
   }
 }

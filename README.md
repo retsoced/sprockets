@@ -7,11 +7,14 @@ Sprockets is a custom theme for [GRAV CMS](https://getgrav.org). This theme is b
 * Lightweight and minimal for optimal performance
 * [Simple Grid](https://simplegrid.io/) CSS Framework
 * Fully responsive, grid based layout
+* Dropdown menu support
 * SCSS based CSS source files for easy customization
 * [Slippry Image Carousel](http://slippry.com) support
 * Built-in support for on-page navigation
 * Multiple page template types
 * [Font Awesome 5](https://fontawesome.com) icon support
+* Custom Drop Caps can be enabled
+* Instgram feed that can be enabled on the about page
 * Social site configuration and linking
   * Facebook
   * Twitter
@@ -47,6 +50,9 @@ This repo is setup so that you can simply set the repo as a ready to run [GRAV](
 All of the site settings are configured in the sprockets.yaml file.
 
 * name (site or business name)
+* dropdown.enabled: true/false
+* dropcaps.enabled: true/false
+* copyright (displays in site footer)
 * business
   * name (added here so it could be different from site name)
   * address 1
@@ -75,7 +81,7 @@ You can then define the rest of the pages content via Markdown or HTML in the pa
 
 ### Inventory Page
 
-The inventory page has a built in category menu based on the child pages of the Inventory section. By adding pages to the inventory folder (page), you add categories to the menu dispayed on the page. The category image is dened by adding an image to the folder of each category. Name the image `menu-image.jpg` and it will automatically pull in that image.
+The inventory page has a built in category menu based on the child pages of the Inventory section. By adding pages to the inventory folder (page), you add categories to the menu dispayed on the page. The category image is defined by adding an image to the folder of each category. Name the image `menu-image.jpg` and it will automatically use that image in the menu.
 
 **The structure will look like this:**   
 * [inventory folder]
@@ -86,9 +92,24 @@ The inventory page has a built in category menu based on the child pages of the 
 
 ### About Page
 
+The About page can be configured to have the staff column appear on the left or right side as well as not show at all. Configure `show_staff` to true to have the staff menu appear, and configure `staff_display` to left or right to determine which side it appears. The page content will display on the opposite side of the staff menu, or take up the full page if it is hidden.
+
+#### Staff
+
+Staff are displayed in an automatically populated menu based on the children within the about folder. In each folder there will need to be a `bio.md` file and a `bio-image.jpg` file. The image should be square, and no smaller than 400px square.
+
+#### Instagram feed
+
+You can also enable your Instagram feed on this page and it will appear at the bottom of the page, full width.
+
 ### Contact Page
 ![contact page layouts](contact-page-layouts.jpg)
-The contact page has a custom address block that automatically populates the business address information based on the settings configured in the `sprockets.yaml` file. The page can be configured to be 1 or 2 columns, and the business address block can be configured to be on the right or the left if `two_column` is set to true, and setting `address:` to left or right. The page content will then appear on the aopposite side as the address or below the address if `two_column` is set to false. This page also utilizes the contact form plugin.
+The contact page has a custom address block that automatically populates the business address information based on the settings configured in the `sprockets.yaml` file. The page can be configured to be 1 or 2 columns, and the business address block can be configured to be on the right or the left if `two_column` is set to true, and setting `address:` to left or right. The page content will then appear on the opposite side as the address or below the address if `two_column` is set to false. This page also utilizes the contact form plugin.
+
+The hero image of the map can be changed by editing the `map.jpg` file in the contact folder, and changing the `hero_image:` name in the page's front matter.
+
+**reCaptcha Contact Form**   
+
 
 ### Thanks
 

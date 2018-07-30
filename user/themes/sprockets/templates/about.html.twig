@@ -1,39 +1,78 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	{% if page.header.showcase %}
-	<header class="showcase {{ page.header.showcaseClass }}">
-		<div class="tint"></div>
-		<h1 class="row page-title">{{ page.title}}</h1>
-	</header>
-	{% else %}
-	<header class="row">
-		<h1 class="page-title">{{ page.title}}</h1>
-	</header>
+	{% if page.header.showcase.display %}
+    {% include 'widgets/showcase.html.twig' %}
+  {% else %}
+    {% if page.header.carousel %}
+      {% include 'widgets/slider.html.twig' %}
+    {% else %}
+      <header class="row page-header">
+        <h1 class="page-title">{{ page.title}}</h1>
+      </header>
+    {% endif %}
 	{% endif %}
 	<article class="row">
-    <section class="col-8">
-      {{ page.content }}
-    </section>
-    <section class="col-4 staff-list">
-      <div class="wrapper">
-        <header>
-          <h3 class="section-title">Meet the Staff</h3>
-        </header>
-        <ul>
-          {% for p in page.collection %}
-            <li class="staffer">
-              <a href="{{ p.link }}" title="{{ p.title }}" target="_self">
-                <img src="{{ p.link }}/bio-image.jpg" alt="{{ p.title }} bio image" width="100%">
-                <section class="info">
-                  <h2 class="name">{{ p.title }}</h2>
-                  <h3 class="title">{{ p.header.position }}</h3>
-                </section>
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-    </section>
+    {% if page.header.show_staff %}
+      {% if page.header.staff_display == 'right' %}
+        <section class="col-8">
+          {{ page.content }}
+        </section>
+        <section class="col-4 staff-list">
+          <div class="wrapper">
+            <header>
+              <h3 class="section-title">Meet the Staff</h3>
+            </header>
+            <ul>
+              {% for p in page.collection %}
+                <li class="staffer">
+                  <a href="{{ p.link }}" title="{{ p.title }}" target="_self">
+                    <img src="{{ p.link }}/bio-image.jpg" alt="{{ p.title }} bio image" width="100%">
+                    <section class="info">
+                      <h2 class="name">{{ p.title }}</h2>
+                      <h3 class="title">{{ p.header.position }}</h3>
+                    </section>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+      {% else %}
+        <section class="col-4 staff-list left">
+          <div class="wrapper">
+            <header>
+              <h3 class="section-title">Meet the Staff</h3>
+            </header>
+            <ul>
+              {% for p in page.collection %}
+                <li class="staffer">
+                  <a href="{{ p.link }}" title="{{ p.title }}" target="_self">
+                    <img src="{{ p.link }}/bio-image.jpg" alt="{{ p.title }} bio image" width="100%">
+                    <section class="info">
+                      <h2 class="name">{{ p.title }}</h2>
+                      <h3 class="title">{{ p.header.position }}</h3>
+                    </section>
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </section>
+        <section class="col-8">
+          {{ page.content }}
+        </section>
+      {% endif %}
+    {% else %}
+      <section class="col-12">
+        {{ page.content }}
+      </section>
+    {% endif %}
 	</article>
+  {% if page.header.instagram.display %}
+    <article class="row instagram-feed">
+      <h2 class="feed-title">{{ page.header.instagram.title }}</h2>
+      <section id="instafeed" class="col-12"></section>
+    </article>
+  {% endif %}
 {% endblock %}

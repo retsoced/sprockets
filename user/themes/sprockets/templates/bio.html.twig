@@ -1,10 +1,22 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-	<header class="row">
+	<header class="row page-header">
 		<h1 class="page-title">{{ page.title}}</h1>
 	</header>
-	<article class="row">
-		{{ page.content }}
-	</article>
+  <div class="row">
+    <article class="col-12">
+      {% if page.header.show_image %}
+        <img src="{{ page.url }}/bio-image.jpg" class="bio-image {{ page.header.image_side }}" alt="{{ page.title }}">
+      {% endif %}
+      {% if page.header.position %}<h2 class="position">{{ page.header.position }}</h2>{% endif %}
+      {{ page.content }}
+    </article>
+  </div>
+  <div class="row">
+    <section class="col-2">
+      <a href="/about" class="back-link" target="_self" title="back to about page"><i class="fas fa-angle-left"></i>back</a>
+    </section>
+    <section class="col-10"></section>
+  </div>
 {% endblock %}

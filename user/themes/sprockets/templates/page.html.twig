@@ -7,12 +7,14 @@
     {% if page.header.carousel %}
       {% include 'widgets/slider.html.twig' %}
     {% else %}
-      <header class="row">
+      <header class="row page-header">
         <h1 class="page-title">{{ page.title}}</h1>
       </header>
     {% endif %}
 	{% endif %}
-	<article class="row">
-		{{ page.content }}
-	</article>
+	<section class="row">
+    <article class="col-12">
+		  {{ page.content }}
+    </article>
+	</section>
 {% endblock %}
