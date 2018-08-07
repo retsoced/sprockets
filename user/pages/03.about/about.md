@@ -1,6 +1,6 @@
 ---
 title: 'About Us'
-menu: about
+menu: About
 in_menu: true
 hide_submenu: true
 show_staff: true

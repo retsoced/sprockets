@@ -140,172 +140,13 @@
   }
 }
 
-.staff-list {
-  display: block;
-  @include clean-block;
-
-  &.left {
-    width: 250px;
-
-    .wrapper {
-      padding: 0 20px 10px 10px;
-      border-right: 1px solid #ccc;
-      border-left: none;
-
-      ul {
-        .staffer {
-          width: 100%;
-        }
-      }
-    }
-  }
-  .wrapper {
-    margin: 0;
-    padding: 0 10px 10px 20px;
-    border-left: 1px solid #ccc;
-
-    .section-title {
-      margin: 0 0 15px 0;
-      color: $primary-color;
-    }
-
-    ul {
-      @include clean-block;
-
-      .staffer {
-        position: relative;
-        height: 175px;
-        width: 80%;
-        margin: 0 0 20px 0;
-        border-radius: 8px;
-        overflow: hidden;
-        background: $site-black;
-        @include transition( all .3s ease-out );
-  
-        .info {
-          display: block;
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          height: 75px;
-          background: rgb(0,0,0);
-          background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 100%);  
-          .name {
-            font-size: 1.8em;
-            color: #fff;
-            padding: 10px 0 0 20px;
-            margin: 0;
-            @include transition( all .1s ease-out );
-          }
-          .title {
-            font-size: 1.2em;
-            color: #fff;
-            padding: 5px 0 0 20px;
-            margin: 0;
-            @include transition( all .1s ease-out );
-          }
-        }
-        img {
-          @include transition( all .3s ease-out );
-          opacity: .6;
-        }
-        &:hover {
-          img {
-            @include scale(1.4);
-            opacity: .9;
-            @include transition( all .3s ease-out );
-          }
-          @include transition( all .3s ease-out );
-          .title, .name {
-            color: $accent-color;
-            @include transition( all .1s ease-out );
-          }
-        }
-      }
-    }
-  }
-}
-
-// ---------------------------
-// BIO PAGE
-.staff-bio {
-  .bio-image {
-    display: inline-block;
-    position: relative;
-    width: 400px;
-    border-radius: 6px;
-    overflow: hidden;
-
-    &.left {
-      margin: 0 10px 10px 0;
-      padding: 0;
-      float: left;
-    }
-    &.right {
-      margin: 0 0 10px 10px;
-      padding: 0;
-      float: right;
-    }
-  }
-}
-
-// ---------------------------
-// CONTACT PAGE
-
-.contact {
-  .location-map {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    .page-title {
-      margin: 0 auto !important;
-      padding-top: 100px !important;
-      font-size: 4em;
-      text-shadow: #666 5px 5px 10px;
-    }
-  }
-  .location {
-    .address-block {
-      margin: 0;
-      padding: 20px 30px;
-      border: 2px solid darken($accent-color,10%);
-      border-radius: 8px;
-      background: rgba($accent-color,.2);
-      li {
-        margin: 0;
-        padding: 2px;
-        list-style: none;
-        font-size: 1em;
-        font-weight: 700;
-        color: darken($secondary-accent,20%);
-        line-height: 1em;
-        &.name {
-          font-size: 1.4em;
-          font-weight: 700;
-          color: $secondary-accent;
-        }
-        &:nth-child(4) {
-          margin-bottom: 10px;
-        }
-      }
-    }
-    .fas {
-      margin: 0 5px 0 0;
-      color: darken($accent-color,40%);
-    }
-  }
-}
-
 // ----------------------
 // INVENTORY
 
 .inventory {
   @include flexy-bits(flex, row wrap, space-around);
 
-  margin: 10px auto 60px auto;
+  margin: 0 auto 80px auto;
   
   &.main {
     .category {
@@ -313,7 +154,7 @@
       flex: 1 1 auto;
       height: 200px;
       width: 30%;
-      margin: 10px 1%;
+      margin: 0 1% 20px 1%;
       border-radius: 8px;
       overflow: hidden;
       background: $site-black;
@@ -324,15 +165,17 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 75px;
+        height: 65px;
         background: rgb(0,0,0);
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 100%);  
 
         .title {
-          font-size: 3.2em;
-          color: #fff;
           padding: 10px 0 0 20px;
           margin: 0;
+          font-size: 2.2em;
+          line-height: 1.6em;
+          color: #fff;
+          
           @include transition( all .1s ease-out );
         }
       }
@@ -341,8 +184,9 @@
         opacity: .6;
       }
       &:hover {
+        @include scale(1.03);
         img {
-          @include scale(1.4);
+          @include scale(1.2);
           opacity: .9;
           @include transition( all .3s ease-out );
         }
@@ -430,6 +274,205 @@
   }
 }
 
+// -----------------------
+// ABOUT PAGE
+.staff-list {
+  display: block;
+  @include clean-block;
+
+  &.left {
+    width: 250px;
+
+    .wrapper {
+      padding: 0 20px 10px 10px;
+      border-right: 1px solid #ccc;
+      border-left: none;
+
+      ul {
+        .staffer {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .wrapper {
+    margin: 0;
+    padding: 0 10px 10px 20px;
+    border-left: 1px solid #ccc;
+
+    .section-title {
+      margin: 0 0 15px 0;
+      color: $primary-color;
+    }
+
+    ul {
+      @include clean-block;
+
+      .staffer {
+        position: relative;
+        height: 175px;
+        width: 80%;
+        margin: 0 0 20px 0;
+        border-radius: 8px;
+        overflow: hidden;
+        background: $site-black;
+        @include transition( all .3s ease-out );
+  
+        .info {
+          display: block;
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 75px;
+          background: rgb(0,0,0);
+          background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 100%);  
+          .name {
+            font-size: 1.8em;
+            color: #fff;
+            padding: 10px 0 0 10px;
+            margin: 0;
+            @include transition( all .1s ease-out );
+          }
+          .title {
+            font-size: 1.2em;
+            color: $divider-color;
+            padding: 5px 0 0 10px;
+            margin: 0;
+            @include transition( all .1s ease-out );
+          }
+        }
+        img {
+          @include transition( all .3s ease-out );
+          opacity: .9;
+        }
+        &:hover {
+          box-shadow: 0 0 20px rgba(0,0,0,.3);
+
+          img {
+            opacity: 1;
+
+            @include scale(1.2);
+            @include transition( all .3s ease-out );
+          }
+          @include transition( all .3s ease-out );
+          .title {
+            color: #fff;;
+            @include transition( all .1s ease-out );
+          }
+          .name {
+            color: $accent-color;
+            @include transition( all .1s ease-out );
+          }
+        }
+      }
+    }
+  }
+}
+
+// ---------------------------
+// BIO PAGE
+.staff-bio {
+  .bio-image {
+    display: inline-block;
+    position: relative;
+    width: 400px;
+    border-radius: 6px;
+    overflow: hidden;
+
+    &.left {
+      margin: 0 20px 10px 0;
+      padding: 0;
+      float: left;
+    }
+    &.right {
+      margin: 0 0 10px 20px;
+      padding: 0;
+      float: right;
+    }
+  }
+}
+
+.bio-social {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @include clean-block;
+  
+  li {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 6px 10px;
+    font-size: 2em;
+    @include transition( all .1s ease-out );
+
+    a {
+      color: rgba(0,0,0,.35);
+    }
+
+    &:hover {
+      transform: scale(1.6);
+      @include transition( all .1s ease-out );
+
+      a {
+        color: rgba(0,0,0,.5);
+      }
+    }
+  }
+}
+
+// ---------------------------
+// CONTACT PAGE
+
+.contact {
+  .location-map {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .page-title {
+      margin: 0 auto !important;
+      padding-top: 100px !important;
+      font-size: 4em;
+      text-shadow: #666 5px 5px 10px;
+    }
+  }
+  .location {
+    .address-block {
+      margin: 0;
+      padding: 20px 30px;
+      border: 2px solid darken($accent-color,10%);
+      border-radius: 8px;
+      background: rgba($accent-color,.2);
+      li {
+        margin: 0;
+        padding: 2px;
+        list-style: none;
+        font-size: 1em;
+        font-weight: 700;
+        color: darken($secondary-accent,20%);
+        line-height: 1em;
+        &.name {
+          font-size: 1.4em;
+          font-weight: 700;
+          color: $secondary-accent;
+        }
+        &:nth-child(4) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .fas {
+      margin: 0 5px 0 0;
+      color: darken($accent-color,40%);
+    }
+  }
+}
+
+// ------------------------
 // Footer styling
 .site-footer {
   display: block;

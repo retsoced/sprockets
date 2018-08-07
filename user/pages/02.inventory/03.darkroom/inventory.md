@@ -6,4 +6,4 @@ og:
     description: 'page description text'
 ---
 
-This is the page for glass. Glorious, clear glass.
+Sitting in the dark, red mood lighting and a bunch of toxic chemicals. What could be better?

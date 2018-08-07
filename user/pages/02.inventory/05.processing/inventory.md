@@ -6,4 +6,4 @@ og:
     description: 'page description text'
 ---
 
-This is the page for glass. Glorious, clear glass.
+Time to make the prints.....
