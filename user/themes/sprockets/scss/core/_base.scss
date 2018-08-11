@@ -83,7 +83,16 @@ article {
 	padding-bottom: $padding-vert;
 }
 
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
 // ------------------------
+.mobile-menu {
+  display: none;
+}
+
 .main-nav {
   height: 50px;
 
@@ -226,28 +235,85 @@ article {
 
 @include mobile-menu-toggle {
   .site-header {
-    &:before {
-      position: absolute;
-      top: 10px;
-      right: 0;
-      content: '\f0c9';
-      display: block;
+    .mobile-menu {
       @include clean-block;
-      margin: 0;
-      width: 50px;
-      height: 50px;
-      font-family: 'Font Awesome 5 Free';
+      @include transition( all .3s ease-out );
+
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -15px;
+      width: 75px;
+      height: 75px;
       color: #fff;
-      font-weight: 700;
-      font-size: 2.2em;
+      font-size: 2.5em;
+      .fas {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 50px;
+        height: 50px;
+      }
+      &:hover {
+        color: $accent-color;
+        text-shadow: #000 0 0 10px;
+        @include transition( all .3s ease-out );
+      }
+      &.closed {
+        .fa-bars { opacity: 1;}
+        .fa-times { opacity: 0; }
+        @include transition( all .3s ease-out );
+      }
+      .fa-bars { opacity: 0;}
+      .fa-times { 
+        opacity: 1;
+      }
     }
     .main-nav {
+      @include transition( all .3s ease-out );
+
       position: absolute;
-      top: 75px;
-      right: 0;
+      top: 67px;
+      right: -225px;
       margin: 0;
       padding: 0;
       width: 200px;
+      height: 80vh;
+      max-height: 360px;
+      background: darken(rgba($primary-color,.9), 25%);
+      border-radius: 0 0 0 8px;
+      opacity: 0;
+      z-index: 1000 !important;
+
+      li:hover, li.current-menu-item {
+        a { background: none; }
+      }
+      ul li {
+        .sub-menu {
+          display: block;
+          position: relative;
+          top: 0;
+          margin: 0;
+          padding: 0;
+          min-width: 13rem;
+          visibility: visible;
+          opacity: 1;
+          background: none;
+
+          a { font-size: 1.4em; }
+        }
+        a { font-size: 1.4em; }
+      }
+      &.mobile-open {
+        @include transition( all .3s ease-out );
+
+        right: 0;
+        opacity: 1;
+      }
+      .fa-angle-down {
+        display: none !important;
+      }
     }
   }
 }

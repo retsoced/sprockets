@@ -3,6 +3,7 @@ title: 'Used Gear'
 taxonomy:
     category:
         - inventory
+body_classes: main-inventory
 og:
     image: facebook-image.jpg
     description: 'page description text'

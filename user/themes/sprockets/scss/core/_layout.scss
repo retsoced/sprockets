@@ -149,11 +149,13 @@
   margin: 0 auto 80px auto;
   
   &.main {
+    justify-content: flex-start;
     .category {
       position: relative;
       flex: 1 1 auto;
       height: 200px;
       width: 30%;
+      max-width: 300px;
       margin: 0 1% 20px 1%;
       border-radius: 8px;
       overflow: hidden;
@@ -186,8 +188,8 @@
       &:hover {
         @include scale(1.03);
         img {
-          @include scale(1.2);
           opacity: .9;
+          @include scale(1.2);
           @include transition( all .3s ease-out );
         }
         @include transition( all .3s ease-out );
@@ -202,10 +204,30 @@
   }
 }
 
+.main-inventory {
+  .drop-caps {
+    article {
+      p:first-of-type:first-letter {
+        color: inherit !important;
+        float: none !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        line-height:inherit !important;
+        padding-top: 0 !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+      }
+    }
+  }
+}
 .inventory-list {
+  margin: 30px 20px;
+  padding: 0;
+
   ul {
     @include clean-block;
     @include flexy-bits(flex, row wrap, space-around);
+    justify-content: flex-start;
 
     li {
       position: relative;
@@ -213,9 +235,9 @@
       width: 15%;
       max-width: 15%;
       height: 182px;
-      margin: 10px 0;
+      margin: 15px;
       padding: 0;
-      border: 2px solid $primary-color-dark;
+      border: 2px solid $secondary-accent;
       border-radius: 6px;
       list-style: none;
       overflow: hidden;
@@ -228,10 +250,10 @@
       }
       .item-title {
         top: 0;
-        padding: 2px 6px 10px;
-        color: #fff;
-        background: $primary-color;
-        background: linear-gradient(180deg, rgba($primary-color,1) 0%, rgba($primary-color,1) 60%, rgba($primary-color,0) 100%);
+        padding: 5px 0 15px 5px;
+        font-size: 1.4em;
+        background: rgba($primary-color,.7);
+        background: linear-gradient(180deg, rgba($primary-color,.7) 0%, rgba($primary-color,.7) 60%, rgba($primary-color,0) 100%);
         @include transition( all .3s ease-out );
       }
 
@@ -244,7 +266,7 @@
       .cond {
         top: 113px;
         padding: 6px;
-        background: $light-grey;
+        background: rgba(#fff,.5);
       }
       .desc {
         top: 130px;
@@ -253,8 +275,7 @@
 
       .price {
         top: 146px;
-        background: $secondary-accent;
-        color: $accent-color;
+        color: $secondary-accent;
         font-weight: 700;
       }
       p {
@@ -262,8 +283,10 @@
         padding: 6px;
       }
       &:hover {
+        border: 2px solid $site-black;
+        @include scale(1.03);
         img {
-          @include scale(1.2);
+          @include scale(1.1);
           opacity: 1;
           @include transition( all .3s ease-out );
         }
@@ -347,6 +370,7 @@
         }
         &:hover {
           box-shadow: 0 0 20px rgba(0,0,0,.3);
+          @include scale(1.03);
 
           img {
             opacity: 1;

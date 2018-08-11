@@ -4,6 +4,7 @@ menu_image: /user/pages/02.inventory/cat-cameras.jpg
 og:
     image: facebook-image.jpg
     description: 'page description text'
+body_classes: main-inventory
 inventory:
     -
         item: camera

@@ -40,6 +40,11 @@ $(function(){
     }).trigger('resize');
     //getFeed('username','yourkeygoeshere');
   }
+
+  $( '.mobile-menu' ).on( 'click', function(){
+    $( '.main-nav' ).toggleClass( 'mobile-open' );
+    $( this ).toggleClass( 'closed' );
+  });
 });
 
 function getFeed(userVal, accountKey){

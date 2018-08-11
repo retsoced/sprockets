@@ -13,19 +13,9 @@
   <section class="row listing cameras">
 
     <menu class="inventory-list row small">
-      <ul>
-      {% for item in page.header.inventory %}
-        {% if item.format == '35mm' %}
-          <li>
-            <img src="{{ page.url }}/{{ item.image  }}" alt="{{ item.brand  }} {{ item.model  }}" width="100%">
-            <h3 class="item-title">{{ item.brand  }} {{ item.model  }}</h3>
-            <p class="cond">condition: <strong>{{ item.condition  }}</strong></p>
-            <!-- <p class="desc">{{ item.description  }}</p> -->
-            <p class="price">{{ item.price  }}</p>
-          </li>
-        {% endif %}
+      {% for group in page.header.inventory_list %}
+        {% include 'widgets/inventory-loop.html.twig' with {'format':group.format,'type':group.type,'brand':group.sort} %}
       {% endfor %}
-      </ul>
     </menu>
 
   </section>

@@ -6,6 +6,7 @@ taxonomy:
 og:
     image: facebook-image.jpg
     description: 'page description text'
+body_classes: main-inventory
 content:
     items: '@self.descendants'
     order:

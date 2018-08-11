@@ -1,0 +1,27 @@
+{% if type == 'camera' %}
+  <h3>{{ format }} {{ type }}s</h3>
+{% else %}
+  <h3>{{ format }} {{ type }}</h3>
+{% endif %}
+
+
+{% for product in page.header.inventory %}
+  {% if product.brand.format == format %}
+    <h4>{{ product.brand.name }}</h4>
+    <ul>
+    {% for item in product.brand.items %}
+      <li>
+        <img src="{{ page.url }}/{{ item.image  }}" alt="{{ product.brand.name  }} {{ item.model  }}" width="100%">
+        <h3 class="item-title">{{ item.model  }}</h3>
+        {% if item.condition == 'hide' %}
+            <p class="cond hide">condition: <strong>{{ item.condition  }}</strong></p>
+        {% else %}
+            <p class="cond">condition: <strong>{{ item.condition  }}</strong></p>
+        {% endif %}
+        <!-- <p class="desc">{{ item.description  }}</p> -->
+        <p class="price">{{ item.price  }}</p>
+      </li>
+    {% endfor %}
+  {% endif %}
+</ul>
+{% endfor %}

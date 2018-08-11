@@ -1,6 +1,7 @@
 ---
 title: Lenses
 menu_image: /user/pages/02.inventory/cat-cameras.jpg
+body_classes: main-inventory
 og:
     image: facebook-image.jpg
     description: 'page description text'

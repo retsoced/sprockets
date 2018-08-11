@@ -4,6 +4,14 @@
 
 Sprockets is a custom theme for [GRAV CMS](https://getgrav.org). This theme is built with the Simple Grid framework and provides a flexible, responsive base for creating a custom, good looking site. Sprockets uses functionality that is only available in Grav 1.4+, and may not function properly on earlier versions.
 
+## Current Version (Alpha)
+
+The Sprockets theme is currently under active development, and in a potential unstable point. Below is a list of items that need more development:   
+* mobile menu
+* responsive layout features
+* inventory handling and page building
+* overall layout and design
+
 ## Features
 
 * Lightweight and minimal for optimal performance
@@ -100,6 +108,47 @@ The About page can be configured to have the staff column appear on the left or 
 
 Staff are displayed in an automatically populated menu based on the children within the about folder. In each folder there will need to be a `bio.md` file and a `bio-image.jpg` file. The image should be square, and no smaller than 400px square.
 
+The bio page also has the option of displaying social icons for each of the staff members. The social links are controlled adding the same social variables to the bio page's front matter. Adding some of the following will display social icons/links to their social media feeds.
+```
+social:
+  - site: 'facebook'
+    username: 'username'
+    text: 'Follow me on Facebook'
+    link: 'https://www.facebook.com/'
+  - site: 'twitter'
+    username: 'username'
+    text: 'Follow me on Twitter'
+    link: 'https://www.twitter.com/'
+  - site: 'linkedin'
+    username: 'username'
+    text: 'Connect with me on LinkedIn'
+    link: 'https://www.linkedin.com/in/'
+  - site: 'instagram'
+    username: 'username'
+    text: 'Follow me on Instagram'
+    link: 'https://www.instagram.com/'
+  - site: 'flickr'
+    username: 'username'
+    text: 'Follow me on Flickr'
+    link: 'https://www.flickr.com/photos/'
+  - site: 'behance'
+    username: 'username'
+    text: 'Follow me on Behance'
+    link: 'https://www.behance.net/'
+  - site: 'pinterest'
+    username: 'username'
+    text: 'Follow me on Pinterest'
+    link: 'https://www.pinterest.com/'
+  - site: 'google-plus'
+    username: 'username'
+    text: 'Find me on Google +'
+    link: 'https://plus.google.com/u/0/+'
+  - site: 'github'
+    username: 'username'
+    text: 'Code with me on Github'
+    link: 'https://www.github.com/'
+```
+
 #### Instagram feed
 
 You can also enable your Instagram feed on this page and it will appear at the bottom of the page, full width.
@@ -116,6 +165,10 @@ The hero image of the map can be changed by editing the `map.jpg` file in the co
 ### Thanks
 
 Thank you to for using this theme. I put a lot of time and work into and I hop you like it. If you have any issues or would to request features, feeel free to create a new [issue](https://github.com/retsoced/sprockets/issues) here in this repo.
+
+### Image copyright and usage
+
+The images used in this theme are all Copyrighted to Darryll DeCoster and not licensed to be used outside of demonstartive purposes for theme development and presentation. If yopu would like to use any of the images in the final site, please contact me directly to request permission and discuss payment options and amounts.
 
 ### License
 The files contained in this project are released under the MIT License. You can find a copy of this license in LICENSE.md file.
