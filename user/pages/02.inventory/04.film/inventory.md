@@ -29,37 +29,37 @@ inventory:
         model: Scala
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: scala-200.jpg
         model: Scala
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: scala-200.jpg
         model: Scala
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: scala-200.jpg
         model: Scala
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: scala-200.jpg
         model: Scala
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: scala-200.jpg
         model: Scala
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: scala-200.jpg
         model: Scala
@@ -76,25 +76,25 @@ inventory:
         model: tmax 200
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: tmax-400.jpg
         model: tmax 100
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: tmax-400.jpg
         model: tmax 400
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: tmax-400.jpg
         model: tmax 800
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
   - brand:
       name: 'Kodak'
       typ: 'film'
@@ -105,25 +105,25 @@ inventory:
         model: tmax 200
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: tmax-400.jpg
         model: tmax 100
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: tmax-400.jpg
         model: tmax 400
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: tmax-400.jpg
         model: tmax 800
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
   - brand:
       name: 'Ilford'
       typ: 'film'
@@ -134,25 +134,25 @@ inventory:
         model: HP4 Plus
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: delta-400.jpg
         model: PanF 50
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: delta-400.jpg
         model: HP5
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
       -
         image: delta-400.jpg
         model: SFX
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $5.00
+        price: 5.00
   - brand:
       name: 'Kodak'
       typ: 'film'
@@ -163,25 +163,25 @@ inventory:
         model: tmax 200
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $15.00
+        price: 15.00
       -
         image: tmax-400.jpg
         model: tmax 100
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $15.00
+        price: 15.00
       -
         image: tmax-400.jpg
         model: tmax 400
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $15.00
+        price: 15.00
       -
         image: tmax-400.jpg
         model: tmax 800
         condition: hide
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $15.00
+        price: 15.00
 ---
 
 Yes, you can still get film. 35mm, 120, 4x5 and even 8x10. We have a solid selection of Black & White, Color Negative and Slide film.

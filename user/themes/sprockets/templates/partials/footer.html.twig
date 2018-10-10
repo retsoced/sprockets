@@ -1,11 +1,11 @@
 <footer class="site-footer">
   <section class="row flexy">
     <header></header>
-    <div class="column col-6">
+    <div class="column col-4">
       <p class="copyright"><i class="fa fa-copyright"></i>{{ theme_config.copyright }}</p>
     </div>
-    <div class="column col-6">
-      <menu class="socialize row small">
+    <div class="column col-8">
+      <menu class="socialize small">
 
         {% for item in theme_config.social %}
           <a href="{{ item.link }}{{ item.username }}" title="{{ item.text }}" role="menuitem">

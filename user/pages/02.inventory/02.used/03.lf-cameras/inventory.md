@@ -14,7 +14,7 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
     -
         item: camera
         image: nikon-fe2.jpg
@@ -23,7 +23,7 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
     -
         item: camera
         image: nikon-fe2.jpg
@@ -32,7 +32,7 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
     -
         item: camera
         image: nikon-fe2.jpg
@@ -41,7 +41,7 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
     -
         item: camera
         image: nikon-fe2.jpg
@@ -50,7 +50,7 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
     -
         item: camera
         image: nikon-fe2.jpg
@@ -59,7 +59,7 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
     -
         item: camera
         image: nikon-fe2.jpg
@@ -68,7 +68,7 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
     -
         item: camera
         image: nikon-fe2.jpg
@@ -77,7 +77,7 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
     -
         item: camera
         image: nikon-fe2.jpg
@@ -86,7 +86,7 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
 ---
 
 Cameras come in all shapes and sizes. Here we sell them all: 35mm, medium format, large format, pinhole, plastic, 3D printed and handmade.

@@ -21,31 +21,31 @@ inventory:
         model: FE2
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
       -
         image: nikon-fe2.jpg
         model: FM
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
       -
         image: nikon-fe2.jpg
         model: F5
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
       -
         image: nikon-fe2.jpg
         model: F3
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
       -
         image: nikon-fe2.jpg
         model: N90
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
   - brand:
       name: 'Canon'
       type: 'camera'
@@ -56,31 +56,31 @@ inventory:
         model: AE-1
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
       -
         image: nikon-fe2.jpg
         model: AE
         condition: Excellent
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
       -
         image: nikon-fe2.jpg
         model: AE
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
       -
         image: nikon-fe2.jpg
         model: AE-1
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
       -
         image: nikon-fe2.jpg
         model: EOS Elan
         condition: mint
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat suscipit ante pellentesque aliquam. Maecenas sagittis tellus vel leo pellentesque cursus.'
-        price: $250.00
+        price: 250.00
 
 ---
 

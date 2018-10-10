@@ -171,6 +171,9 @@
         background: rgb(0,0,0);
         background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 100%);  
 
+        @include for-tablet-landscape-down { height: 55px; }
+        @include mobile-menu-toggle { height: 42px; }
+
         .title {
           padding: 10px 0 0 20px;
           margin: 0;
@@ -178,6 +181,20 @@
           line-height: 1.6em;
           color: #fff;
           
+          @include for-tablet-landscape-down {
+            font-size: 1.9em;
+            line-height: 1.4em;
+          }
+
+          @include mobile-menu-toggle {
+            font-size: 1.5em;
+            line-height: 1em;
+          }
+
+          @include for-phone-only {
+            font-size: 1.3em;
+            line-height: 1em;
+          }
           @include transition( all .1s ease-out );
         }
       }
@@ -231,13 +248,12 @@
 
     li {
       position: relative;
-      flex: 1 1 auto;
-      width: 15%;
-      max-width: 15%;
+      flex: 0 0 16%;
+      min-width: 150px;
       height: 182px;
       margin: 15px;
       padding: 0;
-      border: 2px solid $secondary-accent;
+      border: 4px solid $primary-color;
       border-radius: 6px;
       list-style: none;
       overflow: hidden;
@@ -251,22 +267,30 @@
       .item-title {
         top: 0;
         padding: 5px 0 15px 5px;
-        font-size: 1.4em;
-        background: rgba($primary-color,.7);
-        background: linear-gradient(180deg, rgba($primary-color,.7) 0%, rgba($primary-color,.7) 60%, rgba($primary-color,0) 100%);
+        font-size: 1.2em;
+        background: rgba($primary-color-light,.8);
+        background: linear-gradient(180deg, rgba($primary-color-light,.8) 0%, rgba($primary-color-light,.8) 60%, rgba($primary-color-light,0) 100%);
         @include transition( all .3s ease-out );
       }
 
       img {
-        display: block;
-        top: 23px;
         @include transition( all .3s ease-out );
+
+        display: block;
+        top: 0;
         opacity: .9;
       }
       .cond {
-        top: 113px;
-        padding: 6px;
-        background: rgba(#fff,.5);
+        top: 120px;
+        padding: 3px 0 3px 6px;
+        font-size: 1em;
+        background: rgba(#fff,.7);
+        font-weight: 700;
+
+        span {
+          text-transform: uppercase;
+          color: $secondary-accent;
+        }
       }
       .desc {
         top: 130px;
@@ -274,24 +298,35 @@
       }
 
       .price {
+        position: relative;
         top: 146px;
+        padding-left: 12px;
         color: $secondary-accent;
         font-weight: 700;
+        background: #fff;
+        span {
+          position: absolute;
+          top: 3px;
+          left: 3px;
+          color: #000;
+          font-weight: normal;
+          font-size: .9em;
+        }
       }
       p {
         margin: 0;
         padding: 6px;
       }
       &:hover {
-        border: 2px solid $site-black;
         @include scale(1.03);
+        border: 4px solid darken($primary-color,15%);
         img {
           @include scale(1.1);
-          opacity: 1;
           @include transition( all .3s ease-out );
+          opacity: 1;
         }
-        box-shadow: 0 0 15px rgba(0,0,0,.5);
         @include transition( all .3s ease-out );
+        box-shadow: 0 0 15px rgba(0,0,0,.5);
       }
     }
   }
@@ -300,8 +335,8 @@
 // -----------------------
 // ABOUT PAGE
 .staff-list {
-  display: block;
   @include clean-block;
+  display: block;
 
   &.left {
     width: 250px;
@@ -506,22 +541,23 @@
 
   .socialize {
     margin: 10px auto;
+    padding: 0;
     text-align: right;
     .fab {
+      @include clean-block;
+
       font-size: 1.6em;
-      margin: 0;
-      padding: 0 5px;
       color: rgba(#fff,.3);
       @include transition( all .1s ease-out );
 
       &:hover {
-        transform: scale(1.6);
+        transform: scale(1.4);
         @include transition( all .1s ease-out );
         color: $accent-color;
       }
     }
     a {
-      margin: 0 6px;
+      margin: 0 8px;
     }
   }
 

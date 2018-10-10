@@ -7,6 +7,7 @@ $core-font-size: 1.2em;
 // ---- COLORS
 $primary-color-dark:      #0b3c5d;
 $primary-color:           #328cc1;
+$primary-color-light:     lighten($primary-color,15%);
 $site-black:              #1d2731;
 $primary-color-text:      $site-black;
 $secondary-accent:        #984b43;

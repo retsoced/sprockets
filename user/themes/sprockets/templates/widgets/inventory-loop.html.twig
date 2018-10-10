@@ -16,10 +16,10 @@
         {% if item.condition == 'hide' %}
             <p class="cond hide">condition: <strong>{{ item.condition  }}</strong></p>
         {% else %}
-            <p class="cond">condition: <strong>{{ item.condition  }}</strong></p>
+            <p class="cond">cond: <span>{{ item.condition  }}</span></p>
         {% endif %}
         <!-- <p class="desc">{{ item.description  }}</p> -->
-        <p class="price">{{ item.price  }}</p>
+        <p class="price"><span>$</span>{{ item.price  }}</p>
       </li>
     {% endfor %}
   {% endif %}
