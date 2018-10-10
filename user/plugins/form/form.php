@@ -11,10 +11,10 @@ use Grav\Common\Plugin;
 use Grav\Common\Twig\Twig;
 use Grav\Common\Utils;
 use Grav\Common\Uri;
+use Grav\Common\Yaml;
 use Grav\Plugin\Form\Form;
 use RocketTheme\Toolbox\File\JsonFile;
 use RocketTheme\Toolbox\File\YamlFile;
-use Symfony\Component\Yaml\Yaml;
 use RocketTheme\Toolbox\File\File;
 use RocketTheme\Toolbox\Event\Event;
 
@@ -94,6 +94,12 @@ class FormPlugin extends Plugin
             'onTwigSiteVariables' => ['onTwigVariables', 0],
             'onFormValidationProcessed' => ['onFormValidationProcessed', 0],
         ]);
+
+        // Mini Keep-Alive Logic
+        $task = $this->grav['uri']->param('task');
+        if ($task && $task === 'keep-alive') {
+            exit;
+        }
     }
 
     public function onGetPageTemplates(Event $event)
@@ -187,9 +193,10 @@ class FormPlugin extends Plugin
 
             // Post the form
             if ($this->form) {
-                if ($uri->post('__form-file-uploader__') && $uri->extension() === 'json') {
+                $isJson = $uri->extension() === 'json';
+                if ($isJson && $uri->post('__form-file-uploader__')) {
                     $this->json_response = $this->form->uploadFiles();
-                } else if ($this->form && isset($_POST['__form-file-remover__']) && $this->grav['uri']->extension() === 'json') {
+                } elseif ($isJson && $uri->post('__form-file-remover__')) {
                     $this->json_response = $this->form->filesSessionRemove();
                 } else {
                     $this->form->post();

@@ -1,3 +1,36 @@
+# v2.16.3
+## 09/21/2018
+
+1. [](#improved)
+    * Use `Url:post()` to get the `$_POST` variable (allows common security checks/filtering for the POST data)
+    * Various JS tweaks and enhancements
+1. [](#bugfix)
+    * Fixed issue where `select` set up as `multiple` and with `selectize: create: true` would not properly merge newly created values on rendering.
+ 
+# v2.16.2
+## 08/23/2018
+
+1. [](#improved)
+    * Switched to new Grav `Yaml` class to support Native + Fallback YAML libraries
+    * Simple styling fixes for `array` field
+1. [](#bugfix)
+    * Fixed issue with translations of placeholder text in `array` field
+
+# v2.16.1
+## 08/20/2018
+
+1. [](#new)
+    * Fixed a regression issue with `file` & `array` field
+
+# v2.16.0
+## 08/20/2018
+
+1. [](#new)
+    * Added new `form.keep_alive` option to keep session alive [#275](https://github.com/getgrav/grav-plugin-form/issues/275)
+    * Added `array` field for frontend use
+1. [](#improved)
+    * Improving compatibility `autocomplete` spec [#274](https://github.com/getgrav/grav-plugin-form/pull/274)
+
 # v2.15.1
 ## 06/20/2018
 
