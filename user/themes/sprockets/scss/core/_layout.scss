@@ -152,10 +152,10 @@
     justify-content: flex-start;
     .category {
       position: relative;
-      flex: 1 1 auto;
+      flex: 0 0 auto;
       height: 200px;
       width: 30%;
-      max-width: 300px;
+      min-width: 225px;
       margin: 0 1% 20px 1%;
       border-radius: 8px;
       overflow: hidden;
