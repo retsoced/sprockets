@@ -17,14 +17,14 @@ The Sprockets theme is currently under active development, and in a potential un
 * Lightweight and minimal for optimal performance
 * [Simple Grid](https://simplegrid.io/) CSS Framework
 * Fully responsive, grid based layout
-* Dropdown menu support
+* Drop-down menu support
 * SCSS based CSS source files for easy customization
 * [Slippry Image Carousel](http://slippry.com) support
 * Built-in support for on-page navigation
 * Multiple page template types
 * [Font Awesome 5](https://fontawesome.com) icon support
 * Custom Drop Caps can be enabled
-* Instgram feed that can be enabled on the about page
+* Instagram feed that can be enabled on the about page
 * Social site configuration and linking
   * Facebook
   * Twitter
